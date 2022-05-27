@@ -65,11 +65,9 @@ function changeLanguage(){
     }
 
   return (
-    <IntlProvider locale={intl.locale} messages= {intl.messages}>
-    <div>
-    <button onClick={changeLanguage}>Change Language</button>
-    
+    <IntlProvider locale={intl.locale} messages= {intl.messages}> 
     <div className="container">
+    <button onClick={changeLanguage}><FormattedMessage id="language"/></button>
     <h1><FormattedMessage id="spaces"/></h1>
       <div className='row'>
       {data.map( (elemnt) => (
@@ -81,7 +79,6 @@ function changeLanguage(){
       </div>
       <Room rooms={usefullData}></Room>
       </div>
-    </div>
     </IntlProvider>
   );
 }
